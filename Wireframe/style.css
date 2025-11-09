@@ -26,6 +26,7 @@ As well as useful links to learn more */
 }
 /* ====== Base Elements ======
  General rules for basic HTML elements in any context */
+
 body {
   background: var(--paper);
   color: var(--ink);
@@ -48,6 +49,9 @@ https://www.w3.org/WAI/tutorials/page-structure/regions/
 main {
   max-width: var(--container);
   margin: 0 auto calc(var(--space) * 4) auto;
+}
+header {
+  text-align: center;
 }
 footer {
   position: fixed;
