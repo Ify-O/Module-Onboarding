@@ -54,7 +54,7 @@ header {
   text-align: center;
 }
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   text-align: center;
 }
@@ -81,7 +81,7 @@ Keeping things orderly and separate is the key to good, simple CSS.
 article {
   border: var(--line);
   padding-bottom: var(--space);
-  text-align: left;
+  text-align: justify;
   display: grid;
   grid-template-columns: var(--space) 1fr var(--space);
   > * {
