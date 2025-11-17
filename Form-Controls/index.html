@@ -6,82 +6,140 @@
     <title>My form exercise</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 20px;
+        background-color: #f8e583;
+      }
+      header {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      label {
+        display: inline-block;
+        width: 120px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select {
+        width: 200px;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+      ::placeholder {
+        font-style: italic;
+        color: #a9a9a9;
+      }
+      button {
+        width: 50px;
+        padding: 5px 10px 10px 5px;
+        margin-right: 20px;
+        cursor: pointer;
+        background-color: #5e2102;
+        color: #ffe5d9;
+        border: #000;
+        border-radius: 5px;
+      }
+    </style>
   </head>
   <body>
-  <fieldset style="border: 2px solid #000; padding: 10px; margin-top: 20px;">
-      <img src="Rubyformlogo.png" alt="" height="100" width="500">
-    <header>
-      <h2>Order Confirmation Form</h2>
-    </header>
-    <main>
-      <form>
-        <!--Determine what qualifies as a valid customer name, 
-        collect the data, and ensure it is properly validated.-->
-        <div>
-          <label for="surname">Surname*</label>
-          <input type="text" id="surname" name="surname" 
-          placeholder="Your surname here"
-          required
-          pattern="[A-Za-zÀ-ÿ\s'-]{2,}"
-          title="Surname must contain at least 2 letters."><br><br>
-          <label for="firstname">First Name*</label>
-          <input type="text" id="firstname" name="firstname" 
-          placeholder="your first name here" 
-          required
-          pattern="[A-Za-zÀ-ÿ\s'-]{2,}"
-          title="Surname must contain at least 2 letters."><br><br>
-        </div>
-        <!--Collect the customer's email and ensure it follows 
-        a valid and consistent email format.-->
-        <div>
-          <label for="email">Email*</label>
-          <input type="email" name="email" id="email" 
-          placeholder="please enter email" 
-          required
-          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-          title="Please enter a valid email address."><br><br>
-        </div>
-        <!--Decide on three available t-shirt colour options and 
-        ensure the customer can only select from those choices.-->
-        <div>
-          <label for="colour">Colors Available*</label><br>
+    <div  style="width:100%; text-align:center;">
+      <fieldset style="border: 2px solid #a63c06; background-color:#fff2b2; 
+          padding: 0 20px 20px 20px; border-radius:10px; width:400px; 
+          margin: 20px auto;  text-align:left;">
+        <header >
+          <div>
+            <h1 style="text-align: center; font-family:Georgia, 
+            'Times New Roman', Times, serif; color:#5e2102"> Ruby Darlings T-Shirt Co.
+            </h1>
+          </div>
+          <div>
+            <h2 style="text-align: center; font-family:Georgia, 'Times New Roman', 
+            Times, serif">
+            Order Confirmation Form
+            </h2>
+          </div>
+        </header>
+        <main>
+          <form method="GET" enctype="multipart/form-data">
+            <!--Determine what qualifies as a valid customer name, 
+            collect the data, and ensure it is properly validated.-->
+            <div>
+              <label for="surname">Surname*</label>
+              <input type="text" id="surname" name="surname" 
+              placeholder="Your surname here"
+              required
+              pattern="[A-Za-zÀ-ÿ\s'-]{2,}"
+              title="Surname must contain at least 2 letters."><br><br>
+              <label for="firstname">First Name*</label>
+              <input type="text" id="firstname" name="firstname" 
+              placeholder="your first name here" 
+              required
+              pattern="[A-Za-zÀ-ÿ\s'-]{2,}"
+              title="Surname must contain at least 2 letters."><br><br>
+            </div>
+            <!--Collect the customer's email and ensure it follows 
+            a valid and consistent email format.-->
+            <div>
+              <label for="email">Email*</label>
+              <input type="email" name="email" id="email" 
+              placeholder="please enter email" 
+              required
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+              title="Please enter a valid email address."><br><br>
+            </div>
+            <!--Decide on three available t-shirt colour options and 
+            ensure the customer can only select from those choices.-->
+            <div>
+              <label for="color" style="white-space: nowrap;">Colors Available*</label><br>
 
-          <label for="white">White</label>
-          <input type="radio" id="white" name="color" value="white" required><br>
+              <label for="white">White</label>
+              <input type="radio" id="white" name="color" value="white" required><br>
 
-          <label for="black">Black</label>
-          <input type="radio" id="black" name="color" value="black"><br>
-    
-          <label for="grey">Grey</label>
-           <input type="radio" id="grey" name="color" value="grey"><br><br>
-        </div>
-        <!--Provide six size options (XS, S, M, L, XL, XXL) and ensure 
-        the customer can only select from these choices.-->
-        <div>
-          <label for="size">Sizes*</label>
-          <select name="size" id="size" required>
-            <option value="" disabled selected>Select a size...</option>
-            <option value="extra small">XS</option>
-            <option value="small">S</option>
-            <option value="medium">M</option>
-            <option value="large">L</option>
-            <option value="extra large">XL</option>
-            <option value="extra extra large">XXL</option>
-          </select><br><br>
-        </div>
-        <!--Include a reset button to clear the form and a 
-        submit button-->
-        <div style="margin-top:10px;">
-          <button type="reset">Reset</button>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-    </main>
-  </fieldset>
-      <footer>
-        <h4 style="border: 1px solid #000; padding: 0px; margin-top: 0px; text-align: center;">
+              <label for="black">Black</label>
+              <input type="radio" id="black" name="color" value="black"><br>
+        
+              <label for="grey">Grey</label>
+              <input type="radio" id="grey" name="color" value="grey"><br><br>
+            </div>
+            <!--Provide six size options (XS, S, M, L, XL, XXL) and ensure 
+            the customer can only select from these choices.-->
+            <div>
+              <label for="size">Sizes*</label>
+              <select name="size" id="size" required>
+                <option value="" disabled selected>Select a size...</option>
+                <option value="extra small">XS</option>
+                <option value="small">S</option>
+                <option value="medium">M</option>
+                <option value="large">L</option>
+                <option value="extra large">XL</option>
+                <option value="extra extra large">XXL</option>
+              </select><br><br>
+            </div>
+            <!--Include a reset button to clear the form and a 
+            submit button-->
+            <div style="text-align: center;">
+              <button type="reset" style="padding:10px; width:90px; 
+              margin-right:10px; display:inline-block; text-align:center;">
+              <b>Reset</b></button>
+              <button type="submit" style="padding:10px; width:90px; 
+              display:inline-block; text-align:center;"><b>Submit</b></button>
+            </div>
+          </form>
+        </main>
+        <footer>
+        <h3 style="padding: 5px; 
+          text-align: center; width: 530px; 
+          margin: 50px 0px 0px 0px; color:#5e2102;">
           Thank you for choosing Ruby Darlings!&hearts;
-        </h4>
+        </h3>
       </footer>
+      </fieldset>
+    </div>
   </body>
 </html>
