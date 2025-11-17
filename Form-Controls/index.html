@@ -36,7 +36,10 @@
         <div>
           <label for="email">Email*</label>
           <input type="email" name="email" id="email" 
-          placeholder="please enter email" required> <br><br>
+          placeholder="please enter email" 
+          required
+          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+          title="Please enter a valid email address."><br><br>
         </div>
         <!--Decide on three available t-shirt colour options and 
         ensure the customer can only select from those choices.-->
