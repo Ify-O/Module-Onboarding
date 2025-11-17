@@ -14,54 +14,62 @@
       <h2>Order Confirmation Form</h2>
     </header>
     <main>
-      <form>
+      <form method="GET" enctype="multipart/form-data">
         <!--Determine what qualifies as a valid customer name, 
         collect the data, and ensure it is properly validated.-->
         <div>
-          <label for="name">Surname*</label>
-          <input type="text" id="name" name="Surname" 
-          placeholder="Your surname here"> <br><br>
-          <label for="First Name">First Name*</label>
-          <input type="text" id="First Name" name="First Name" 
-          placeholder="your first name here" required> <br><br>
+          <label for="surname">Surname*</label>
+          <input type="text" id="surname" name="surname" 
+          placeholder="Your surname here"
+          required
+          pattern="[A-Za-zÀ-ÿ\s'-]{2,}"
+          title="Surname must contain at least 2 letters."><br><br>
+          <label for="firstname">First Name*</label>
+          <input type="text" id="firstname" name="firstname" 
+          placeholder="your first name here" 
+          required
+          pattern="[A-Za-zÀ-ÿ\s'-]{2,}"
+          title="Surname must contain at least 2 letters."><br><br>
         </div>
         <!--Collect the customer's email and ensure it follows 
         a valid and consistent email format.-->
         <div>
           <label for="email">Email*</label>
           <input type="email" name="email" id="email" 
-          placeholder="please enter email" required>
+          placeholder="please enter email" required> <br><br>
         </div>
         <!--Decide on three available t-shirt colour options and 
         ensure the customer can only select from those choices.-->
         <div>
-          <label for="colour">Colors Available*</label>
-          <li>
+          <label for="colour">Colors Available*</label><br>
+
           <label for="white">white</label>
-          <input type="radio" id="white" name="color" value="white" required>
+          <input type="radio" id="white" name="color" value="white" required><br>
+
           <label for="Black">Black</label>
-          <input type="radio" id="black" name="color" type="black">
+          <input type="radio" id="black" name="color" type="black"><br>
+    
           <label for="grey">Grey</label>
-          <input type="radio" id="grey" name="color" value="color"> <br><br>
-          </li>
+           <input type="radio" id="grey" name="color" value="color"> <br><br>
         </div>
         <!--Provide six size options (XS, S, M, L, XL, XXL) and ensure 
         the customer can only select from these choices.-->
         <div>
           <label for="size">Sizes</label>
-          <select name="size" id="size">
+          <select name="size" id="size" required>
             <option value="extra small">XS</option>
             <option value="small">S</option>
             <option value="medium">M</option>
             <option value="large">L</option>
             <option value="extra large">XL</option>
             <option value="extra extra large">XXL</option>
-        </div><br><br>
+          </select><br><br>
+        </div>
         <!--Include a reset button to clear the form and a 
         submit button-->
         <div>
-        <button type="reset">Reset</button>
-        <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
     </main>
