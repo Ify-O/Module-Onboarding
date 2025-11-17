@@ -15,6 +15,8 @@
     </header>
     <main>
       <form>
+        <!--Determine what qualifies as a valid customer name, 
+        collect the data, and ensure it is properly validated.-->
         <div>
           <label for="name">Surname*</label>
           <input type="text" id="name" name="Surname" 
@@ -23,11 +25,15 @@
           <input type="text" id="First Name" name="First Name" 
           placeholder="your first name here" required> <br><br>
         </div>
+        <!--Collect the customer's email and ensure it follows 
+        a valid and consistent email format.-->
         <div>
           <label for="email">Email*</label>
           <input type="email" name="email" id="email" 
           placeholder="please enter email" required>
         </div>
+        <!--Decide on three available t-shirt colour options and 
+        ensure the customer can only select from those choices.-->
         <div>
           <p>Color*</p>
           <label for="white">white</label>
@@ -37,6 +43,8 @@
           <label for="grey">Grey</label>
           <input type="radio" id="grey" name="color" value="color"> <br><br>
         </div>
+        <!--Provide six size options (XS, S, M, L, XL, XXL) and ensure 
+        the customer can only select from these choices.-->
         <div>
           <label for="size">Sizes</label>
           <select name="size" id="size">
