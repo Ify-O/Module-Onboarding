@@ -10,7 +10,7 @@
       body {
         font-family: Georgia, 'Times New Roman', Times, serif;
         margin: 20px;
-        background-color: #ffe566;
+        background-color: #f8e583;
       }
       label {
         display: inline-block;
@@ -19,12 +19,17 @@
         margin-top: 10px;
         font-weight: bold;
       }
+
       input[type="text"],
       input[type="email"],
       select {
         width: 200px;
         padding: 5px;
         margin-bottom: 10px;
+      }
+      ::placeholder {
+        font-style: italic;
+        color: #a9a9a9;
       }
       button {
         width: 50px;
@@ -34,6 +39,7 @@
         background-color: #5e2102;
         color: #ffe5d9;
         border: #000;
+        border-radius: 5px;
       }
     </style>
   </head>
@@ -106,8 +112,11 @@
         <!--Include a reset button to clear the form and a 
         submit button-->
         <div style="text-align: center;">
-          <button type="reset">Reset</button>
-          <button type="submit">Submit</button>
+          <button type="reset" style="padding:10px; width:90px; 
+          margin-right:10px; display:inline-block; text-align:center;">
+          <b>Reset</b></button>
+          <button type="submit" style="padding:10px; width:90px; 
+          display:inline-block; text-align:center;"><b>Submit</b></button>
         </div>
       </form>
     </main>
