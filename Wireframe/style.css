@@ -33,8 +33,6 @@ body {
   font: var(--font);
   margin: 3px;            
   border: 1px solid black; 
-  padding-left: 200px;
-  padding-right: 200px;
   box-sizing: border-box;
 }
 a {
@@ -54,20 +52,16 @@ https://www.w3.org/WAI/tutorials/page-structure/regions/
 main {
   max-width: var(--container);
   margin: 0 auto calc(var(--space) * 4) auto;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 header {
   text-align: center;
 }
 .web-footer {
  position: relative; 
- bottom: 0;
- width: 100vw; 
- margin-left: calc(50% - 50vw); 
  text-align: center; 
- padding: 20px; 
  border-top: var(--line); 
- border-bottom: var(--line); 
- box-sizing: border-box;
 }
 
 /* ====== Articles Grid Layout ====
