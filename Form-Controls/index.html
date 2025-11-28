@@ -74,8 +74,8 @@
               <input type="text" id="surname" name="surname" 
               placeholder="Your surname here"
               required
-              pattern="[A-Za-zÀ-ÿ\s'-]{2,}"
-              title="Surname must contain at least 2 letters."><br><br>
+              pattern="[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ\s'-]{1,}"
+              title="Surname must contain at least 2 valid characters."><br><br>
               <label for="firstname">First Name*</label>
               <input type="text" id="firstname" name="firstname" 
               placeholder="your first name here" 
